@@ -1,0 +1,12 @@
+{
+	"name": "sum-files",
+	"version": "1.0.0",
+	"description": "Write a production-ready function that sums the numbers in a file. The function will receive as input the path to a file. Each line of the file will contain either a number or a path to another file. For each file, output the file path and the sum of the numbers contained both directly in the file or in any of the sub files listed (or their sub files, etc).",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"author": "mgimenez",
+	"license": "ISC"
+}
