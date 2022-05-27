@@ -1,3 +1,2 @@
 ./uploads/c.txt
 27
-./uploads/c.txt
