@@ -17,16 +17,19 @@ error_reporting(E_ALL);
 
 function sumFiles(string $pathToFile, $results = array()): array
 {
-    $contents = file($pathToFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    // Calculate the sum and store it in array for final output
-    $results[$pathToFile] = array_sum($contents);
+    if(file_exists($pathToFile)){
+        $contents = file($pathToFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        // Calculate the sum and store it in array for final output
+        $results[$pathToFile] = array_sum($contents);
 
-    // Loop through the contents of the file, get file name if presente
-    for ($i=0; $i < count($contents); $i++) {
-        if (!is_numeric($contents[$i]) && !array_key_exists($contents[$i], $results)) {
-            $results = sumfiles($contents[$i], $results);
+        // Loop through the contents of the file, get file name if presente
+        for ($i=0; $i < count($contents); $i++) {
+            if (!is_numeric($contents[$i]) && !array_key_exists($contents[$i], $results)) {
+                $results = sumfiles($contents[$i], $results);
+            }
         }
     }
+    
     return $results;
 }
 

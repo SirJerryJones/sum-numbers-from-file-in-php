@@ -13,9 +13,10 @@ Write a production-ready function in PHP that sums the numbers in a file and out
 
 Solution:
 
-1. Get the contents from the file and store it in array.
-2. Store the file name and sum of the numbers into an associative array.
-3. Loop through the content and check if file name is present in the content.
-4. If present, check if the file name is already exist in the output($result) array.
-5. Call the function (sumFiles) till all files are read and processed.
-6. Output the result as array.
+1. Check if file exist or not. If no file found, skip the process and return null.
+2. Get the contents from the file and store it in array.
+3. Store the file name and sum of the numbers into an associative array.
+4. Loop through the content and check if file name is present in the content.
+5. If present, check if the file name is already exist in the output($result) array.
+6. Call the function (sumFiles) till all files are read and processed.
+7. Output the result as array.
