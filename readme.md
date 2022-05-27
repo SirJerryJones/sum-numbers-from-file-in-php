@@ -10,3 +10,12 @@
   \*/
 
 Write a production-ready function in PHP that sums the numbers in a file and outputs details of the results. The function will receive as input the path to a single file. Each line of the file will contain either a number or a relative path to another file. For each file processed, output the file path and the sum of all of the numbers contained both directly in the file and in any of the sub files listed in the file (and their sub files, etc).
+
+Solution:
+
+1. Get the contents from the file and store it in array.
+2. Store the file name and sum of the numbers into an associative array.
+3. Loop through the content and check if file name is present in the content.
+4. If present, check if the file name is already exist in the output($result) array.
+5. Call the function (sumFiles) till all files are read and processed.
+6. Output the result as array.
